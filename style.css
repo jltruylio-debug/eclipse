@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{font-family:Inter,Arial,sans-serif;color:#eef1ef;background:#080b0d;font-synthesis:none;text-rendering:optimizeLegibility}
+*{box-sizing:border-box}
+html,body,#app{width:100%;height:100%;margin:0;overflow:hidden}
+body{background:#080b0d;touch-action:none}
+#game-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.screen{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(90deg,rgba(3,7,8,.88),rgba(3,7,8,.38) 58%,rgba(3,7,8,.18)),linear-gradient(0deg,rgba(3,7,8,.68),transparent 50%)}
+.menu-vignette{position:absolute;inset:0;box-shadow:inset 0 0 180px 45px rgba(0,0,0,.8);pointer-events:none}
+.menu-content{position:relative;width:min(900px,88vw);padding:5vh 0 4vh}
+.eyebrow{font-size:10px;letter-spacing:.38em;font-weight:700;color:#a5b4ad}
+h1{font-family:'Barlow Condensed',Impact,sans-serif;font-size:clamp(76px,15vw,174px);line-height:.78;letter-spacing:.055em;margin:22px 0 12px;font-weight:800;text-shadow:0 8px 35px #000}
+.subtitle{font-size:clamp(12px,2vw,18px);letter-spacing:.55em;color:#c1c9c4;margin:0 0 34px}
+.story{color:#aab4ae;font-size:14px;letter-spacing:.025em;margin-bottom:34px}
+.primary-button{border:1px solid rgba(220,235,225,.6);background:#d5ded7;color:#111916;padding:17px 34px;font-weight:800;letter-spacing:.15em;font-size:11px;cursor:pointer;transition:background .2s,transform .2s}
+.primary-button:hover{background:#fff;transform:translateY(-2px)}
+.menu-footer{position:absolute;bottom:0;left:0;font-size:9px;letter-spacing:.2em;color:#829087}
+.menu-footer span{padding:0 9px;color:#d7e0d8}
+.hidden{display:none!important}
+.hud{position:absolute;inset:0;pointer-events:none;padding:26px 30px;display:flex;flex-direction:column;justify-content:space-between}
+.hud-top,.hud-bottom{display:flex;align-items:flex-start;justify-content:space-between}
+.location,.survival-stats,.controls-hint{font-size:10px;letter-spacing:.16em;color:#d3dbd5}
+.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#a4c3a9;margin-right:9px;box-shadow:0 0 12px #a4c3a9}
+.survival-stats{display:flex;gap:22px}.survival-stats b{color:white;margin-left:7px}
+.crosshair{position:absolute;left:50%;top:50%;width:5px;height:5px;border:1px solid rgba(255,255,255,.75);border-radius:50%;transform:translate(-50%,-50%)}
+.objective{display:flex;flex-direction:column;gap:6px}.objective small{font-size:9px;letter-spacing:.2em;color:#9eaaa2}.objective strong{font-size:13px;font-weight:500}
+.controls-hint{align-self:flex-end;color:#aab4ad}.controls-hint span{padding:0 8px;color:#66736b}
+.mobile-controls{position:absolute;inset:auto 0 0;height:190px;pointer-events:none}
+.joystick-zone{position:absolute;left:24px;bottom:24px;width:138px;height:138px;pointer-events:auto;touch-action:none}
+.joystick-base{position:absolute;inset:13px;border:1px solid rgba(230,240,232,.36);border-radius:50%;background:rgba(10,18,15,.25);backdrop-filter:blur(4px)}
+.joystick-knob{position:absolute;width:48px;height:48px;left:50%;top:50%;margin:-24px;border-radius:50%;background:rgba(220,232,222,.5);border:1px solid rgba(255,255,255,.65);box-shadow:0 3px 15px #0006;pointer-events:none}
+.mobile-action{position:absolute;right:32px;bottom:52px;width:76px;height:76px;border-radius:50%;border:1px solid #ffffff70;background:#142019aa;color:white;font-size:10px;font-weight:700;letter-spacing:.1em;pointer-events:auto;touch-action:none}
+.pause-overlay{position:absolute;inset:0;background:#030607c9;display:grid;place-items:center;backdrop-filter:blur(8px)}
+.pause-card{text-align:center}.pause-card h2{font:700 52px 'Barlow Condensed',sans-serif;letter-spacing:.12em;margin:15px 0 30px}
+@media(max-width:700px){.menu-content{width:84vw;padding-top:0}.story{max-width:270px;line-height:1.6;font-size:12px}.menu-footer{font-size:8px}.hud{padding:18px}.controls-hint{display:none}.survival-stats{gap:12px;font-size:9px}.location{font-size:9px}.hud-bottom{align-items:flex-end}.objective strong{font-size:12px}}
+@media(hover:none){.primary-button{min-height:54px;min-width:210px}}

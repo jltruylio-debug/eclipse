@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#080b0d" />
+    <meta name="description" content="ECLIPSE — O Último Refúgio. Uma experiência de sobrevivência e exploração." />
+    <title>ECLIPSE — O Último Refúgio</title>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="game-canvas" aria-label="Mundo 3D de ECLIPSE"></canvas>
+      <main id="main-menu" class="screen">
+        <div class="menu-vignette"></div>
+        <div class="menu-content">
+          <div class="eyebrow">UMA EXPERIÊNCIA DE SOBREVIVÊNCIA</div>
+          <h1>ECLIPSE</h1>
+          <p class="subtitle">O ÚLTIMO REFÚGIO</p>
+          <p class="story">Quando a última luz desaparecer, o que restará de você?</p>
+          <button id="start-button" class="primary-button">INICIAR JORNADA</button>
+          <div class="menu-footer">NEXTOL GAMES <span>•</span> PROTÓTIPO DE DESENVOLVIMENTO</div>
+        </div>
+      </main>
+      <section id="hud" class="hud hidden" aria-live="polite">
+        <div class="hud-top">
+          <div class="location"><span class="status-dot"></span> FLORESTA DO NORTE</div>
+          <div class="survival-stats">
+            <span>VIDA <b id="health-value">100</b></span>
+            <span>ENERGIA <b id="stamina-value">100</b></span>
+          </div>
+        </div>
+        <div class="crosshair"></div>
+        <div id="interaction-hint" class="interaction-hint"></div>
+        <div class="hud-bottom">
+          <div class="objective"><small>OBJETIVO ATUAL</small><strong>Explore a região</strong></div>
+          <div class="controls-hint">WASD MOVER <span>•</span> SHIFT CORRER <span>•</span> MOUSE OLHAR</div>
+        </div>
+      </section>
+      <div id="mobile-controls" class="mobile-controls hidden">
+        <div id="joystick-zone" class="joystick-zone">
+          <div class="joystick-base"><div id="joystick-knob" class="joystick-knob"></div></div>
+        </div>
+        <button id="run-button" class="mobile-action">CORRER</button>
+      </div>
+      <div id="pause-overlay" class="pause-overlay hidden">
+        <div class="pause-card"><p class="eyebrow">ECLIPSE</p><h2>PAUSADO</h2><button id="resume-button" class="primary-button">CONTINUAR</button></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
